@@ -2,11 +2,11 @@
 <!--
   nom_nom website iOS theme modifications by Brian Rose (b___Ro)
   iambrianrose.com @b___Ro
-  x2
+  x3
 -->
 <html>
   <head>
-    <title>Nom Nom by b___Ro</title>
+    <title>nom_nom by b___Ro</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.min.css" />
@@ -34,7 +34,7 @@
 	    <img src="/assets/css/images/webmain.png">
 	  </div>
 
-	  <p>an ios theme &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ios7-9</p>
+	  <p>an ios theme &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ios8-9+</p>
 	  <br>
 
 	  <div class="services" serviceid="0">
@@ -53,7 +53,7 @@
 	    <span class="close">SCROLL DOWN ×</span></br>
 
 	    <div class="modal-content">
-	      <img src="/assets/css/images/ss.png"></br>
+<img id="screenshot" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="/assets/css/images/ss.png">
 	    </div>
 	  </div>
 
@@ -67,9 +67,20 @@
       </div>
     </div>
 
+
+      <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css"/>
+            <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900"/>
+
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+
+
+    <script src="/assets/js/jquery.unveil.js"></script>
 
     <script>
       window.onload = function() { document.body.className = ''; }
@@ -86,9 +97,10 @@
       // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
 
-      // When the user clicks the button, open the modal
+  // When the user clicks the button, open the modal
       btn.onclick = function() {
-	  modal.style.display = "block";
+          $("#screenshot").trigger("unveil");
+      modal.style.display = "block";
       }
 
       // When the user clicks on <span> (x), close the modal
@@ -125,8 +137,14 @@
 	$('.services-desc').html(srvcarray[sid][1]);
       });
 
+      $("img").unveil();
+
       });
     </script>
+
+
+
+
   </body>
 </html>
 
